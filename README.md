@@ -50,7 +50,6 @@ class studentAdmin(admin.ModelAdmin):
     list_display=('sid','name','regno','marks','email')
 
 ```
-
 # OUTPUT
 ![image](https://user-images.githubusercontent.com/113497680/236613200-385cfebf-c9b4-43de-9938-0770929acfa6.png)
 
