@@ -3,42 +3,57 @@
 To develop a Django application to store and retrieve data from a student database using Object Relational Mapping(ORM).
 
 # Entity Relationship Diagram
+![image](https://user-images.githubusercontent.com/113497680/236613300-47059628-fd7c-42da-bb7a-5c6efabfee7b.png)
+
 # DESIGN STEPS
 # STEP 1:
-Clone the problem from the github
+Clone the repository from github.
 
 # STEP 2:
-Create a new app
+Create an admin interfacefor Django.
 
 # STEP 3:
-Enter the code for admin.py and model.py
+Create an app and edit settings.py.
 
-# step 4:
-Execute Django admin and create 10 employees
+# STEP 4:
+Makemigrations and migrate the changes.
+
+# STEP 5:
+Create admin user and write pythoncode for admin and models.
+
+# STEP 6:
+Make all the migrations to 'myapp'.
+
+# STEP 7:
+Create an student database with 10 feilds using runserver command.
 
 # PROGRAM
 ```
-from django.contrib import admin
-from .models import Employee,EmployeeAdmin
-admin.site.register(Employee,EmployeeAdmin)
+admin.py 
 
-Model.py
+from django.contrib import admin
+from .models import student,studentAdmin 
+admin.site.register(student,studentAdmin)
+
+models.py
 
 from django.db import models
 from django.contrib import admin
-class Employee (models.Model): 
-    eid=models.CharField(max_length=20, help_text="Employee ID") 
-    name=models.CharField(max_length=100) 
-    salary=models.IntegerField()
-    age=models.IntegerField()
-    email=models. EmailField()
+class student (models.Model):
+    sid=models.CharField(max_length=28)
+    name=models.CharField(max_length=30)
+    regno=models.IntegerField()
+    marks=models.IntegerField()
+    email=models.EmailField()
 
-class EmployeeAdmin (admin. ModelAdmin):
-    list_display=('eid','name','salary','age','email')
+class studentAdmin(admin.ModelAdmin):
+    list_display=('sid','name','regno','marks','email')
+
 ```
 
 # OUTPUT
-![image](https://user-images.githubusercontent.com/113497680/233373630-7f7c1c29-f3a6-4fe3-94de-1563304c65e4.png)
+![image](https://user-images.githubusercontent.com/113497680/236613200-385cfebf-c9b4-43de-9938-0770929acfa6.png)
+
 
 # RESULT
 The code executed successfully
